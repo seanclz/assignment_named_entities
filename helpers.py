@@ -59,7 +59,7 @@ def get_coord_same_type(doc):
     for ent in doc.ents:
         for token in ent:
             dict[token.idx + len(token)] = ent
-    # cycle through the entities to get
+    # cycle through the entities
     for ent in doc.ents:
         # filter to avoid entities that are not coordinated with anything
         conj_check = [tok for tok in ent.rights if tok.right_edge.dep_ == 'conj']
