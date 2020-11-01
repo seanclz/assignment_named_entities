@@ -2,7 +2,7 @@
 
 ## Description
 
-The project uses **[spaCy](https://spacy.io/)** and a **[spaCy model](https://spacy.io/models/en#en_core_web_sm)** to analyze texts through **Named Entity Recognition** and **Dependency Parsing**. The data collected is displayed through an html page using **Flask**. The graphs are plotted using the **[Plotly library](https://plotly.com/python/)**. Examples of output may be found in the Visuals section.
+The project uses **[spaCy](https://spacy.io/)** and a **[spaCy model](https://spacy.io/models/en#en_core_web_sm)** to analyze texts through **Named Entity Recognition** and **Dependency Parsing**. The data collected is displayed through an HTML page using **Flask**. The graphs are plotted using the **[Plotly library](https://plotly.com/python/)**. Examples of output may be found in the Visuals section.
 
 ## Input
 
