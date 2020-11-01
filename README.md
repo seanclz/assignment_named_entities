@@ -96,7 +96,6 @@ from spacy import displacy
 # displacy.serve(doc, style="ent")  uncomment to show the Named Entities
 # displacy.serve(doc, style="dep")  uncomment to show the Dependency Tree
 ```
-In the below sub-section , you can found more various example of inputs and outputs.
 
 ### More examples
 
