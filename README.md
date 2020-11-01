@@ -100,29 +100,23 @@ In the below sub-section , you can found more various example of inputs and outp
 
 ### More examples
 
-Input:
 ```bash
 Bill and New York are different entities.
 ```
-Output:
 ```bash
 []
 ```
 ##
-Input:
 ```bash
 Europe, New York, Asia, Boston and Africa are 5 named entities.
 ```
-Output:
 ```bash
 [[Europe, Asia, Africa], [New York, Boston]]
 ```
 ##
-Input:
 ```bash
 John, the dog, the cat and Sarah are in New York.
 ```
-Output:
 ```bash
 [[John, Sarah]] 
 ```
