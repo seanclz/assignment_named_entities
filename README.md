@@ -45,7 +45,7 @@ python app.py
 ```
 This will launch a basic server, head over to the localhost link that pops up in the console and let the page load.
 
-**Note** : If you plan to run this with the **MultiWOZ_2.2 dataset** as input data, the page will take a few minutes to load (5~8 minutes in my testings) as the dataset is composed of approximatively ~10000 dialogues each of which sitting at a ~1000 characters size on average.
+**Note** : If you plan to run this with the **MultiWOZ_2.2 dataset** as input data, the page will take a spme minutes to load (5~7 minutes in my testings) as the dataset is composed of approximatively ~10000 dialogues each of which sitting at a ~1000 characters size on average.
 
 
 ## Visuals
