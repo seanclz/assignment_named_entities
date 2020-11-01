@@ -59,7 +59,7 @@ Example of visuals obtained by running the app using the MultiWOZ_2.2 dataset as
 
 This section contains more information about **[this function](https://github.com/seanclz/assignment_named_entities/blob/main/helpers.py)** and what it is trying to catch. 
 
-You can test the function on your own by using this simple code:
+You can test the function on your own by customizing this simple code:
 
 ```bash
 nlp = spacy.load('en_core_web_sm')
@@ -68,7 +68,7 @@ doc = nlp("Your sentences here.")
 for sentence in doc.sents:
     print(get_coord_same_type(doc))
 ```
-
+The function will output a list , in which each element is a list of **coordinated Named Entities of the same type**.
 We can define **Coordinated Entities** as entities that are "linked" through the **conj** branch of the **Dependency Tree**.
 
 Input:
@@ -83,7 +83,7 @@ The **Named Entities** and the **Dependency Tree** of the above sentence are as 
 * **"Bill"** and **"Melinda Gates"** are **PERSON** entities that are coordinated.
 * **"Seattle"** and **"Dallas"** are **GPE** entities that are coordinated.
 
-Since all the coordinated Named Entities are of the same type, the output of the function is as follow:
+Since all the **coordinated Named Entities** are of the **same type**, the output of the function is as follow:
 
 ```bash
 [[Bill, Melinda Gates], [Seattle, Dallas]]
