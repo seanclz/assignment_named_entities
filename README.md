@@ -100,21 +100,17 @@ In the below sub-section , you can found more various example of inputs and outp
 
 ### More examples
 
-```bash
-Bill and New York are different entities.
-```
+Input: "Bill and New York are different entities."
+
 ```bash
 []
 ```
-```bash
-Europe, New York, Asia, Boston and Africa are 5 named entities.
-```
+Input: "Europe, New York, Asia, Boston and Africa are 5 named entities."
+
 ```bash
 [[Europe, Asia, Africa], [New York, Boston]]
 ```
-```bash
-John, the dog, the cat and Sarah are in New York.
-```
+Input: "John, the dog, the cat and Sarah are in New York."
 ```bash
 [[John, Sarah]] 
 ```
