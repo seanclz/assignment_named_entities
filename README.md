@@ -2,8 +2,9 @@
 
 ## Description
 
-The app uses **[spaCy](https://spacy.io/)** and a **[spaCy model](https://spacy.io/models/en#en_core_web_sm)** to analyze texts through **Named Entity Recognition** and **Dependency Parsing**. 
-The data collected is displayed through an HTML page using **Flask**. The graphs are plotted using the **[Plotly library](https://plotly.com/python/)**. 
+The app uses **[spaCy](https://spacy.io/)** and a **[spaCy model](https://spacy.io/models/en#en_core_web_sm)** to analyze texts through **Named Entity Recognition** and **Dependency Parsing**. <br>
+The data collected is displayed through an HTML page using **Flask**. <br> 
+The graphs are plotted using the **[Plotly library](https://plotly.com/python/)**. 
 
 In particular, the output will display information about:
 
@@ -68,7 +69,7 @@ doc = nlp("Your sentences here.")
 for sentence in doc.sents:
     print(get_coord_same_type(doc))
 ```
-The function will output a list , in which each element is a list of **coordinated Named Entities of the same type**.
+The function will output a list , in which each element is a list of **coordinated Named Entities of the same type**. <br>
 We can define **Coordinated Entities** as entities that are "linked" through the **conj** branch of the **Dependency Tree**.
 
 Input:
