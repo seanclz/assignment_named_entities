@@ -2,7 +2,19 @@
 
 ## Description
 
-The project uses **[spaCy](https://spacy.io/)** and a **[spaCy model](https://spacy.io/models/en#en_core_web_sm)** to analyze texts through **Named Entity Recognition** and **Dependency Parsing**. The data collected is displayed through an HTML page using **Flask**. The graphs are plotted using the **[Plotly library](https://plotly.com/python/)**. Examples of output may be found in the Visuals section.
+The app uses **[spaCy](https://spacy.io/)** and a **[spaCy model](https://spacy.io/models/en#en_core_web_sm)** to analyze texts through **Named Entity Recognition** and **Dependency Parsing**. 
+The data collected is displayed through an HTML page using **Flask**. The graphs are plotted using the **[Plotly library](https://plotly.com/python/)**. 
+
+In particular, the output will display information about:
+
+* the number of Named Entities
+* the most recurrent Named Entity types
+* the most recurrent Named Entities 
+* the number of Coordinated Entities of the same type
+* the frequency of Coordinated Entities of the same type over the total of Named Entities
+* the most recurrent Named Entity types among Coordinated Entities of the same type
+
+Examples of output may be found in the **[Visuals section](#visuals)**.
 
 ## Input
 
@@ -43,6 +55,76 @@ Example of visuals obtained by running the app using the MultiWOZ_2.2 dataset as
 ![](https://github.com/seanclz/assignment_named_entities/blob/main/imgs/namedentityfreq.png)
 ![](https://github.com/seanclz/assignment_named_entities/blob/main/imgs/coordtypebarplot.png)
 
-## Digression about Named Entity dependencies 
+## Info about the "get_coord_same_type" function
+
+This section contains more information about **[this function](https://github.com/seanclz/assignment_named_entities/blob/main/helpers.py)** and what it is trying to catch. 
+
+You can test the function on your own by using this simple code:
+
+```bash
+nlp = spacy.load('en_core_web_sm')
+doc = nlp("Your sentences here.")
+
+for sentence in doc.sents:
+    print(get_coord_same_type(doc))
+```
+
+We can define **Coordinated Entities** as entities that are "linked" through the **conj** branch of the **Dependency Tree**.
+
+Input:
+```bash
+Bill and Melinda Gates come respectively from Seattle and Dallas.
+```
+The **Named Entities** and the **Dependency Tree** of the above sentence are as follow:
+
+![](https://github.com/seanclz/assignment_named_entities/blob/main/imgs/entities.png)
+![](https://github.com/seanclz/assignment_named_entities/blob/main/imgs/deptree.png)
+
+* **"Bill"** and **"Melinda Gates"** are **PERSON** entities that are coordinated.
+* **"Seattle"** and **"Dallas"** are **GPE** entities that are coordinated.
+
+Since all the coordinated Named Entities are of the same type, the output of the function is as follow:
+
+```bash
+[[Bill, Melinda Gates], [Seattle, Dallas]]
+```
+You can visualize the **Named Entities** and the **Dependency Tree** by using **[Displacy](https://spacy.io/universe/project/displacy/)**.
+```bash
+from spacy import displacy
+
+[...]
+# displacy.serve(doc, style="ent")  uncomment to show the Named Entities
+# displacy.serve(doc, style="dep")  uncomment to show the Dependency Tree
+```
+In the below sub-section , you can found more various example of inputs and outputs.
+
+### More examples
+
+Input:
+```bash
+Bill and New York are different entities.
+```
+Output:
+```bash
+[]
+```
+##
+Input:
+```bash
+Europe, New York, Asia, Boston and Africa are 5 named entities.
+```
+Output:
+```bash
+[[Europe, Asia, Africa], [New York, Boston]]
+```
+##
+Input:
+```bash
+John, the dog, the cat and Sarah are in New York.
+```
+Output:
+```bash
+[[John, Sarah]] 
+```
 
 ## Credits
