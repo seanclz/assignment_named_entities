@@ -8,6 +8,7 @@ def get_coord_same_type(doc):
     def coord_named_entities(entity, enttype, dict, tobeadded):
         tobeadded.append([entity, entity.label_])
         conj = [tok for tok in entity.rights if tok.right_edge.dep_ == 'conj']
+        # if the current entity is not coordinated with anything , return the lists of coordinated entitites of the same type
         if not conj:
             if len(tobeadded) > 1:
                 # remove from dictionary all the keys of coordinated entities to avoid visiting them again
@@ -21,11 +22,13 @@ def get_coord_same_type(doc):
             else:
                 return []
         else:
+            # if the current entity is coordinated with another entity, check if this entity is named or not
             for tk in conj:
                 # if the key is not in the dictionary, it means that this is not a named entity
                 if (tk.idx+len(tk)) not in dict:
                     found = True
                     conj = [token for token in tk.rights if token.right_edge.dep_ == 'conj']
+                    # search the dependency tree for a named entity among the coordinated ones
                     while conj and conj[0].idx + len(conj[0]) not in dict:
                         conj = [token for token in conj[0].rights if token.right_edge.dep_ == 'conj']
                     if not conj:
@@ -68,7 +71,7 @@ def get_coord_same_type(doc):
             list_tobeadded = []
             list_coord = coord_named_entities(ent, ent.label_, dict, list_tobeadded)
             for list in list_coord:
-                # only add sub-sets of coordinated entities of the same type with more than 1 element
+                # only add sub-lists of coordinated entities of the same type with more than 1 element
                 if len(list) > 1:
                     complete_list.append(list)
 
