@@ -32,10 +32,16 @@ python app.py
 ```
 This will launch a basic server, head over to the localhost link that pops up in the console and let the page load.
 
-**Note** : If you plan to run this with the **MultiWOZ 2.2 dataset** as input data, the page will take a few minutes to load (~ 5 minutes in my testing) as the dataset is composed of approximatively ~10000 dialogues each of which sitting at a ~1000 characters size on average.
+**Note** : If you plan to run this with the **MultiWOZ_2.2 dataset** as input data, the page will take a few minutes to load (~ 5 minutes in my testing) as the dataset is composed of approximatively ~10000 dialogues each of which sitting at a ~1000 characters size on average.
 
 
 ## Visuals
+
+Example of visuals obtained by running the app using the MultiWOZ_2.2 dataset as input :
+
+![](https://github.com/seanclz/assignment_named_entities/blob/main/imgs/namedentitybarplot.png)
+![](https://github.com/seanclz/assignment_named_entities/blob/main/imgs/namedentityfreq.png)
+![](https://github.com/seanclz/assignment_named_entities/blob/main/imgs/coordtypebarplot.png)
 
 ## Digression about Named Entity dependencies 
 
