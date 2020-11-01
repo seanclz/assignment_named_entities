@@ -56,7 +56,7 @@ Example of visuals obtained by running the app using the MultiWOZ_2.2 dataset as
 ![](https://github.com/seanclz/assignment_named_entities/blob/main/imgs/namedentityfreq.png)
 ![](https://github.com/seanclz/assignment_named_entities/blob/main/imgs/coordtypebarplot.png)
 
-## Info about the "get_coord_same_type" function
+## Description of the "get_coord_same_type" function
 
 This section contains more information about **[this function](https://github.com/seanclz/assignment_named_entities/blob/main/helpers.py)** and what it is trying to catch. 
 
