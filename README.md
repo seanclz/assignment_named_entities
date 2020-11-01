@@ -106,14 +106,12 @@ Bill and New York are different entities.
 ```bash
 []
 ```
-##
 ```bash
 Europe, New York, Asia, Boston and Africa are 5 named entities.
 ```
 ```bash
 [[Europe, Asia, Africa], [New York, Boston]]
 ```
-##
 ```bash
 John, the dog, the cat and Sarah are in New York.
 ```
