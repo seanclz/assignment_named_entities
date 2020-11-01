@@ -114,5 +114,3 @@ Input: "John, the dog, the cat and Sarah are in New York."
 ```bash
 [[John, Sarah]] 
 ```
-
-## Credits
