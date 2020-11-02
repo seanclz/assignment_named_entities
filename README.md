@@ -19,7 +19,7 @@ Examples of output may be found in the **[Visuals section](#visuals)**.
 
 ## Input
 
-The script is currently set to read dialogues from the **[MultiWOZ dataset](https://github.com/budzianowski/multiwoz)** and can only read json files of said format. Be sure to change the part of the program that reads the data files according to your needs if you plan to use this for other formats.
+The script is currently set to read dialogues from the **[MultiWOZ dataset](https://github.com/budzianowski/multiwoz)** and can only read json files of said format. <br> Be sure to change the part of the program that reads the data files according to your needs if you plan to use this for other formats.
 
 ## Installation
 
@@ -45,7 +45,7 @@ python app.py
 ```
 This will launch a basic server, head over to the localhost link that pops up in the console and let the page load.
 
-**Note** : If you plan to run this with the **MultiWOZ_2.2 dataset** as input data, the page will take a some minutes to load (5~7 minutes in my testings) as the dataset is composed of approximatively ~10000 dialogues each of which sitting at a ~1000 characters size on average.
+**Note** : If you plan to run this with the **MultiWOZ_2.2 dataset** as input data, the page will take some minutes to load (5~7 minutes in my testings) as the dataset is composed of approximatively ~10000 dialogues each of which sitting at a ~1000 characters size on average.
 
 
 ## Visuals
